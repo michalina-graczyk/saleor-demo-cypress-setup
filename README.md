@@ -2,6 +2,13 @@
 
 Saleor DEMO involves usage of service worker for precaching purposes. This conflicts with the way Cypress performs E2E testing. As soon as the service worker is registered, the caching mechanism is enabled and further test execution causes Cypress to target the cached version. It additionally results in unwanted redirect to nonexisting URL.
 
+## Running
+
+1. `npm install`
+2. `npm run cypress:open`
+or
+3. `npm run cypress:run` for headless test run
+
 ## Workaround
 
 In order to work around this problem it is required to perform two steps:
@@ -19,6 +26,7 @@ In order to work around this problem it is required to perform two steps:
       })
   ```
 * Prevent service worker register while running Cypress tests
+  * Solution provided in `cypress/support/index.js`
   * See [related issue](https://github.com/cypress-io/cypress/issues/702)
 
 ## Future solution
