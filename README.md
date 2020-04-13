@@ -7,7 +7,7 @@ Saleor DEMO involves usage of service worker for precaching purposes. This confl
 In order to work around this problem it is required to perform two steps:
 * Unregister manually the service worker from the perspective of Cypress driven browser (if it was registered before)
   * For [Chrome](https://www.codementor.io/@himank/how-to-unregister-service-workers-n8mzf5jce)
-  * For Firefox enter [about:debugging](about:debugging) in URL and look for Services section
+  * For Firefox enter `about:debugging` in browser's URL and look for `Services` section
   * Or unregister programmatically from the console perspective:
 
   ```
