@@ -18,7 +18,7 @@ In order to work around this problem it is required to perform two steps:
   * Or unregister programmatically from the console perspective:
 
   ```
-  window.avigator.serviceWorker.getRegistrations()
+  window.navigator.serviceWorker.getRegistrations()
       .then((registrations) => {
         registrations.forEach((registration) => {
           registration.unregister()
