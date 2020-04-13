@@ -17,7 +17,7 @@ In order to work around this problem it is required to perform two steps:
   * For Firefox enter `about:debugging` in browser's URL and look for `Services` section
   * Or unregister programmatically from the console perspective:
 
-  ```
+  ```js
   window.navigator.serviceWorker.getRegistrations()
       .then((registrations) => {
         registrations.forEach((registration) => {
