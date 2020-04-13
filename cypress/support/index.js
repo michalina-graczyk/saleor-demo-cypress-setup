@@ -24,8 +24,8 @@ import './commands'
  * @see https://github.com/cypress-io/cypress/issues/702
  */
 Cypress.on('window:before:load', win => {
-  if (win.navigator && navigator.serviceWorker) {
-    navigator.serviceWorker.getRegistrations()
+  if (win.navigator && win.navigator.serviceWorker) {
+    win.navigator.serviceWorker.getRegistrations()
       .then((registrations) => {
         registrations.forEach((registration) => {
           registration.unregister()
